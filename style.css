@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(rgb(31, 31, 31), rgb(50, 50, 50));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#logo img {
+  height: 2.88rem;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 72px;
+  padding: 1.08rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.56rem;
+}
+
+#menu li {
+  display: block;
+  padding: 0.56rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+#opening-account {
+  padding: 16px 24px;
+  background: #c1ee0e;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (max-width: 704px) {
+  #btn-mobile {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: 72px;
+    right: 0;
+    height: 0;
+    transition: 0.56s;
+    z-index: 1000;
+    background-image: linear-gradient(rgb(31, 31, 31), rgb(50, 50, 50));
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    display: block;
+    height: calc(100vh - 72px);
+    visibility: visible;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1.04rem 0;
+    margin: 0 1.04rem;
+  }
+
+  #menu a:hover {
+    background: rgba(256, 256, 256, 0.05);
+  }
+
+  .content-main {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 4rem;
+  }
+
+  .content-main div img {
+    padding: 0 2rem;
+  }
+
+  .title-and-btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+  }
+
+  span.filled {
+    color: #c1ee0e;
+  }
+
+  span.outline {
+    color: transparent;
+    -webkit-text-stroke-width: 0.04rem;
+    -webkit-text-stroke-color: #c1ee0e;
+  }
+
+  #opening-account {
+    margin: 1.64rem auto;
+  }
+
+  .main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-image img {
+    width: calc(0.64 * (80vw));
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0 0.4rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    gap: 0.8rem;
+  }
+
+  #hamburger-menu {
+    border-top: 2px solid white;
+  }
+
+  #hamburger-menu::after,
+  #hamburger-menu::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 4.96px;
+    transition: 0.4s;
+    position: relative;
+  }
+
+  #nav.active #hamburger-menu {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger-menu::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger-menu::after {
+    transform: rotate(-135deg);
+    top: -6.96px;
+  }
+}
+
+@media (max-width: 1920px) and (min-width: 705px) {
+  #header {
+    margin: 0 4rem;
+  }
+  .content-main {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5.56rem;
+  }
+
+  .title-and-btn {
+    width: 32%;
+  }
+
+  .content-main div img {
+    width: calc(0.4 * (80vw));
+  }
+
+  h1 {
+    padding: 1rem 0;
+    font-size: 2.8rem;
+    color: white;
+  }
+
+  span.filled {
+    color: #c1ee0e;
+  }
+
+  span.outline {
+    color: transparent;
+    -webkit-text-stroke-width: 0.04rem;
+    -webkit-text-stroke-color: #c1ee0e;
+  }
+
+  #opening-account {
+    margin: 1.64rem auto;
+    transition: 0.4s;
+  }
+
+  #opening-account:hover {
+    background-color: #a6ce09;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1472px) and (min-width: 1170px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 1169px) and (min-width: 901px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 1.56rem;
+  }
+
+  #opening-account {
+    padding: 12px 20px;
+    background: #c1ee0e;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.28rem;
+  }
+
+  #opening-account {
+    padding: 12px 20px;
+    background: #c1ee0e;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
