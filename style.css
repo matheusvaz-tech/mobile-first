@@ -15,11 +15,12 @@ body {
   background-image: linear-gradient(rgb(31, 31, 31), rgb(50, 50, 50));
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
 }
 
 a {
-  color: white;
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -64,7 +65,23 @@ a:hover {
   font-size: 16px;
 }
 
-@media (max-width: 704px) {
+h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.logos img {
+  height: 3rem;
+}
+
+@media (max-width: 820px) {
   #btn-mobile {
     display: block;
   }
@@ -120,6 +137,10 @@ a:hover {
     font-size: 1.8rem;
     text-align: center;
     color: white;
+  }
+
+  h2 {
+    text-align: center;
   }
 
   span.filled {
@@ -186,7 +207,7 @@ a:hover {
   }
 }
 
-@media (max-width: 1920px) and (min-width: 705px) {
+@media (max-width: 1920px) and (min-width: 821px) {
   #header {
     margin: 0 4rem;
   }
